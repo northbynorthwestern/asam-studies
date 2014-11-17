@@ -1,0 +1,26 @@
+{% extends 'app/templates/base.html' %}
+
+{% block content %}
+
+<section class="landing-grid">
+  <a href="{{ BAND.slug }}">
+    <div class="BAND">
+      <h3>{{ BAND.title }}</h3>
+      <img src="{{ BAND.landing_img }}" alt="">
+    </div>
+  </a>
+  <a href="{{ FIELD.slug }}">
+    <div class="FIELD">
+      <h3>{{ FIELD.title }}</h3>
+      <img src="{{ FIELD.landing_img }}" alt="">
+    </div>
+  </a>
+  <a href="{{ GAME.slug }}">
+    <div class="GAME">
+      <h3>{{ GAME.title }}</h3>
+      <img src="{{ GAME.landing_img }}" alt="">
+    </div>
+  </a>
+</section>
+
+{% endblock %}

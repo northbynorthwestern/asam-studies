@@ -1,0 +1,11 @@
+@import 'bourbon/dist/bourbon';
+@import 'neat/app/assets/stylesheets/neat';
+
+$banner-height: 75vh;
+$grand-header-image-url: '../img/index-grand-header.jpg';
+
+@import 'nbnteractive-styles/initialize';
+@import 'nbnteractive-styles/theme/theme';
+
+@import 'theme/header';
+@import 'theme/landing-grid';

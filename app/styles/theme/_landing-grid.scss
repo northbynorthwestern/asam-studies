@@ -1,0 +1,39 @@
+@mixin highlight-landing($color: $nbn-purple) {
+  background-color: $color;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  padding-left: .25em;
+  padding-right: .75em;
+  color: $white;
+  line-height: 1;
+  display: inline-block;
+}
+
+.landing-grid {
+  a {
+    margin-top: 1.5em;
+    @include span-columns(6 of 12);
+    @include omega(2n);
+    text-decoration: none;
+
+    div {
+      background-color: peachpuff;
+      height: 250px;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      h3 {
+        @include highlight-landing(transparentize($nbn-purple, .125));
+      }
+    }
+
+    h3 {
+      margin-top: 1em;
+      font-size: 1.25em;
+      @include highlight-landing(transparentize($nbn-purple, .35));
+
+    }
+  }
+}

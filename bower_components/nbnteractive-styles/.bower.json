@@ -1,0 +1,20 @@
+{
+  "name": "nbnteractive-styles",
+  "version": "0.6.1",
+  "main": "main.scss",
+  "private": true,
+  "dependencies": {
+    "bourbon": "~4.0.2",
+    "neat": "~1.7.0"
+  },
+  "homepage": "https://github.com/northbynorthwestern/nbnteractive-styles",
+  "_release": "0.6.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.6.1",
+    "commit": "b5360c982253c254e689ceb31412bc50c9d3d079"
+  },
+  "_source": "git://github.com/northbynorthwestern/nbnteractive-styles.git",
+  "_target": "*",
+  "_originalSource": "northbynorthwestern/nbnteractive-styles"
+}

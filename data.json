@@ -1,0 +1,20 @@
+{
+  "META": {
+    "project_title": "Gameday",
+    "design_and_dev": "Alex Duner",
+    "project_subhead": "This is the project's subheader",
+    "base_url": "http://apps.northbynorthwestern.com/gameday"
+  },
+  "BAND": {
+    "title": "The Band",
+    "slug": "band"
+  },
+  "FIELD": {
+    "title": "The Field",
+    "slug": "field"
+  },
+  "GAME": {
+    "title": "The Game",
+    "slug": "game"
+  }
+}

@@ -1,0 +1,25 @@
+.banner h1 {
+  font-family: 'Graduate', serif !important;
+  font-size: 3.5em !important;
+  text-transform: uppercase;
+
+  a {
+    color: lighten($nbn-purple, 65%) !important;
+  }
+
+  @include media($default-768) {
+    font-size: 5em !important;
+  }
+}
+
+.extra-masthead {
+  @include sans-serif;
+  color: $white;
+  font-weight: 700;
+  height: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: table;
+  font-family: 'Graduate', serif;
+  &:hover { text-decoration: none; }
+}
