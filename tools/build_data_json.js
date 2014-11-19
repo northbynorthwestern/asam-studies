@@ -15,6 +15,10 @@ var SHEETS = [
 
 var DATA = {};
 
+DATA.SHEETS = {
+  list: []
+};
+
 var workbook = XLSX.readFile('data.xlsx');
 
 SHEETS.forEach(function(sheet) {
@@ -48,6 +52,8 @@ SHEETS.forEach(function(sheet) {
   }
 
   DATA[sheet] = temp;
+  temp.sheet = sheet;
+  DATA.SHEETS.list.push(temp);
 });
 
 fs.writeFileSync('data.json', JSON.stringify(DATA, null, 2));

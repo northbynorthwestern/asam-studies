@@ -11,7 +11,7 @@
 
 .landing-grid {
   a {
-    margin-top: 1.5em;
+    margin-top: $gutter;
     @include span-columns(6 of 12);
     @include omega(2n);
     text-decoration: none;

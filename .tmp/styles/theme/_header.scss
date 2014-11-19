@@ -1,5 +1,9 @@
-.banner h1 {
-  font-family: 'Graduate', serif !important;
+.nbn-logo {
+  height: 2em !important;
+}
+
+.banner .grand-header h1 {
+  @include academic-serif;
   font-size: 3.5em !important;
   text-transform: uppercase;
 
@@ -13,13 +17,22 @@
 }
 
 .extra-masthead {
-  @include sans-serif;
+  @include academic-serif;
+
   color: $white;
+  display: inline-table;
   font-weight: 700;
   height: 100%;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: table;
-  font-family: 'Graduate', serif;
-  &:hover { text-decoration: none; }
+  position: relative;
+  top: -.5em;
+
+  a {
+    color: $white;
+    display: table-cell;
+    margin-left: .25em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover { text-decoration: none; }
+  }
 }

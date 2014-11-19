@@ -1,0 +1,127 @@
+$arrow-width: 3em;
+
+.arrows {
+  position: fixed;
+  top: 50vh;
+  width: 100%;
+  z-index: 100;
+
+  a {
+    color: $white !important;
+    display: inline-block;
+    position: absolute;
+    transition: all .1s linear;
+  }
+
+  .previous {
+    left: 0;
+
+    div.icon {
+      left: 0;
+      float: right;
+    }
+
+    div.title {
+      float: left;
+      position: relative;
+    }
+  }
+
+  .next {
+    right: 0;
+
+    div.icon {
+      right: 0;
+      float: left;
+    }
+
+    div.title {
+      float: right;
+      position: relative;
+    }
+  }
+
+  div {
+    display: inline-block;
+    transition: background-color .1s linear;
+
+    &.icon {
+      background-color: transparentize($navigation-yellow, .2);
+      font-weight: 700;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      text-align: center;
+      width: 3em;
+    }
+
+
+    &.title {
+      @include academic-serif;
+      background-color: transparentize($navigation-yellow, .2);
+      padding: 1em;
+      display: none;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+
+    div.icon {
+      background-color: transparentize($navigation-yellow, 0);
+    }
+
+    &.previous div.title { left: 0; }
+    &.next div.title { right: 0; }
+  }
+
+}
+
+.bottom-navigation {
+  display: block;
+}
+
+.next-story {
+  background-color: transparentize($navigation-yellow, .8);
+  border: $navigation-yellow 2px solid;
+
+  div.title {
+    padding: 10px;
+    padding-bottom: .25em;
+    @include academic-serif;
+    font-size: 1.5em;
+  }
+
+  a {
+    color: $bodytext-black;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  span.arrow {
+    margin-left: .125em;
+    transition: margin-left .1s linear;
+  }
+
+  &:hover {
+    background-color: transparentize($navigation-yellow, .7);
+    span.arrow {
+      margin-left: .25em;
+    }
+  }
+
+  p {
+    padding: 10px;
+    padding-top: 0;
+    font-size: .875em;
+    font-weight: 300;
+
+    a {
+      color: inherit;
+      font-weight: 500;
+      display: inline;
+    }
+  }
+}

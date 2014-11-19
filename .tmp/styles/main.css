@@ -393,7 +393,7 @@ th {
   line-height: 1.4;
   text-align: left; }
 
-figure figcaption {
+figure figcaption, .content-banner .caption, .caption {
   font-family: "Proxima-Nova", Helvetica, sans-serif;
   color: #bbbbbb;
   font-size: .8em;
@@ -1072,30 +1072,38 @@ hr {
   hr.slim {
     height: 1px; }
 
-.banner h1 {
-  font-family: 'Graduate', serif !important;
+.nbn-logo {
+  height: 2em !important; }
+
+.banner .grand-header h1 {
+  font-family: 'Graduate', serif;
   font-size: 3.5em !important;
   text-transform: uppercase; }
-  .banner h1 a {
+  .banner .grand-header h1 a {
     color: #f7f2fc !important; }
   @media screen and (min-width: 768px) {
-    .banner h1 {
+    .banner .grand-header h1 {
       font-size: 5em !important; } }
 
 .extra-masthead {
-  font-family: "Proxima-Nova", Helvetica, sans-serif;
+  font-family: 'Graduate', serif;
   color: white;
+  display: inline-table;
   font-weight: 700;
   height: 100%;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: table;
-  font-family: 'Graduate', serif; }
-  .extra-masthead:hover {
-    text-decoration: none; }
+  position: relative;
+  top: -.5em; }
+  .extra-masthead a {
+    color: white;
+    display: table-cell;
+    margin-left: .25em;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .extra-masthead a:hover {
+      text-decoration: none; }
 
 .landing-grid a {
-  margin-top: 1.5em;
+  margin-top: 1.618em;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -1132,3 +1140,148 @@ hr {
     color: white;
     line-height: 1;
     display: inline-block; }
+
+.arrows {
+  position: fixed;
+  top: 50vh;
+  width: 100%;
+  z-index: 100; }
+  .arrows a {
+    color: white !important;
+    display: inline-block;
+    position: absolute;
+    transition: all .1s linear; }
+  .arrows .previous {
+    left: 0; }
+    .arrows .previous div.icon {
+      left: 0;
+      float: right; }
+    .arrows .previous div.title {
+      float: left;
+      position: relative; }
+  .arrows .next {
+    right: 0; }
+    .arrows .next div.icon {
+      right: 0;
+      float: left; }
+    .arrows .next div.title {
+      float: right;
+      position: relative; }
+  .arrows div {
+    display: inline-block;
+    transition: background-color .1s linear; }
+    .arrows div.icon {
+      background-color: rgba(255, 176, 0, 0.8);
+      font-weight: 700;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      text-align: center;
+      width: 3em; }
+    .arrows div.title {
+      font-family: 'Graduate', serif;
+      background-color: rgba(255, 176, 0, 0.8);
+      padding: 1em;
+      display: none; }
+  .arrows a:hover {
+    text-decoration: none; }
+    .arrows a:hover div.icon {
+      background-color: #ffb000; }
+    .arrows a:hover.previous div.title {
+      left: 0; }
+    .arrows a:hover.next div.title {
+      right: 0; }
+
+.bottom-navigation {
+  display: block; }
+
+.next-story {
+  background-color: rgba(255, 176, 0, 0.2);
+  border: #FFB000 2px solid; }
+  .next-story div.title {
+    padding: 10px;
+    padding-bottom: .25em;
+    font-family: 'Graduate', serif;
+    font-size: 1.5em; }
+  .next-story a {
+    color: #282828;
+    text-decoration: none; }
+    .next-story a:hover {
+      text-decoration: none; }
+  .next-story span.arrow {
+    margin-left: .125em;
+    transition: margin-left .1s linear; }
+  .next-story:hover {
+    background-color: rgba(255, 176, 0, 0.3); }
+    .next-story:hover span.arrow {
+      margin-left: .25em; }
+  .next-story p {
+    padding: 10px;
+    padding-top: 0;
+    font-size: .875em;
+    font-weight: 300; }
+    .next-story p a {
+      color: inherit;
+      font-weight: 500;
+      display: inline; }
+
+.content-banner {
+  margin: 0; }
+  .content-banner .banner-image {
+    max-height: 65vh;
+    overflow: hidden; }
+  .content-banner img {
+    width: 100%; }
+  .content-banner .caption {
+    text-align: right;
+    padding: 0.5em; }
+  @media screen and (min-width: 768px) {
+    .content-banner .caption {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      float: right; }
+      .content-banner .caption:last-child {
+        margin-right: 0; } }
+
+.shift-left {
+  margin-left: 0%;
+  padding: 1.5em;
+  padding-bottom: 0; }
+
+.story-container {
+  z-index: 10;
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    .story-container {
+      padding-top: 1em;
+      padding-bottom: 2em;
+      top: -8.25em; }
+      .story-container .prose {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 91.4702%; }
+        .story-container .prose:last-child {
+          margin-right: 0; } }
+  .story-container .content-block {
+    background-color: white; }
+  .story-container h2 {
+    font-family: 'Graduate', serif;
+    font-size: 3em; }
+
+.byline {
+  font-weight: 300; }
+
+.nbn-footer {
+  height: initial; }
+
+.credits {
+  padding-bottom: .5em;
+  padding-top: .5em; }
+
+body {
+  background-color: white; }
+
+.caption {
+  color: #282828; }

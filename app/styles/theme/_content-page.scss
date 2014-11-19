@@ -1,0 +1,60 @@
+.content-banner {
+  margin: 0;
+
+  .banner-image {
+    max-height: 65vh;
+    overflow: hidden;
+  }
+
+  img {
+    @include fill-parent();
+  }
+
+  .caption {
+    @extend %caption;
+    text-align: right;
+    padding: 0.5em;
+  }
+
+  @include media($default-768) {
+    .caption {
+      @include span-columns(4);
+      float: right;
+    }
+  }
+}
+
+.shift-left {
+  @include shift(0);
+  @include pad(1.5em);
+  padding-bottom: 0;
+}
+
+.story-container {
+
+  z-index: 10;
+  position: relative;
+
+  @include media($default-768) {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    top: -8.25em;
+
+    .prose {
+      @include span-columns(11 of 12);
+    }
+  }
+
+  .content-block {
+    background-color: $background-color;
+  }
+
+  h2 {
+    @include academic-serif;
+    font-size: 3em;
+  }
+}
+
+.byline {
+  font-weight: 300;
+}

@@ -17,7 +17,7 @@
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/styles/main.css">
   <!-- endbuild -->
 </head>
 <body>
@@ -25,17 +25,12 @@
 <header class="masthead">
   <div class="logo">
     <a href="//www.northbynorthwestern.com/"><img class="nbn-logo" src="http://media.northbynorthwestern.com.s3.amazonaws.com/media/img/nbn_logo.svg" alt=""></a>
-    <a class="extra-masthead" href="{{ META.base_url }}">Gameday</a>
+    <div class="extra-masthead"><a href="/">Gameday</a></div>
   </div>
 </header>
 
-<div class="banner">
-  <div class="grand-header-image"></div>
-  <header class="grand-header">
-    <h1><a href="/">{{ META.project_title }}</a></h1>
-    <p>{{ META.project_subhead }}</p>
-  </header>
-</div>
+{% block banner %}{% endblock %}
+{% block arrows %}{% endblock %}
 
 <div class="container">
 {% block content %}{% endblock %}
@@ -43,7 +38,8 @@
 
 <footer class="nbn-footer">
   <div class="container">
-    <div class="credits content-block">
+    <div class="credits shift-left">
+      <p><strong>Published on {{ META.published_date }}</strong></p>
       <p><strong>Design and Development</strong>: {{ META.design_and_dev }}</p>
       <p>&copy; 2014 <a href="http://www.northbynorthwestern.com/">North by Northwestern</a></p>
     </div>
@@ -57,7 +53,7 @@
 <!-- endbuild -->
 
 <!-- build:js({app,.tmp}) scripts/main.js -->
-<script src="scripts/main.js"></script>
+<script src="/scripts/main.js"></script>
 <!-- endbuild -->
 
 </body>

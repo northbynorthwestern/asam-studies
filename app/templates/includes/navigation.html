@@ -1,0 +1,49 @@
+{% macro arrows(sheets, pageSlug) %}
+
+{% for story in sheets.list %}
+  {% if story.slug == pageSlug %}
+    {% set before = sheets.list[loop.index0 - 1] %}
+    {% set after = sheets.list[loop.index0 + 1] %}
+
+    <div class="arrows">
+    {% if before and before.title %}
+      <a href="/{{ before.slug }}" class="arrow previous">
+        <div class="title">{{ before.title }}</div>
+        <div class="icon"><</div>
+      </a>
+    {% endif %}
+    {% if after %}
+      <a href="/{{ after.slug }}" class="arrow next">
+        <div class="icon">></div>
+        <div class="title">{{ after.title }}</div>
+      </a>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endfor %}
+
+{% endmacro %}
+
+
+
+{% macro nextStory(sheets, pageSlug) %}
+
+{% for story in sheets.list %}
+  {% if story.slug == pageSlug %}
+    {% set after = sheets.list[loop.index0 + 1] %}
+    {% if after %}
+    <div class="content-block row shift-left">
+      <a href="/{{ after.slug }}" class="bottom-navigation">
+        <div class="next-story">
+            <div class="title">{{ after.title }}<span class="arrow">&#65515;</span></div>
+            <p>Or <a href="/">return to the starting page</a> to explore more Gameday stories.</p>
+        </div>
+      </a>
+    </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% endmacro %}
+
+

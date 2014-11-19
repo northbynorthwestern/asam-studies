@@ -7,5 +7,29 @@ $grand-header-image-url: '../img/index-grand-header.jpg';
 @import 'nbnteractive-styles/initialize';
 @import 'nbnteractive-styles/theme/theme';
 
+$background-color: lighten($nbn-purple, 70%);
+
+@import 'theme/helpers';
 @import 'theme/header';
 @import 'theme/landing-grid';
+@import 'theme/arrows';
+@import 'theme/content-page';
+
+
+.nbn-footer {
+  height: initial;
+}
+
+.credits {
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.caption {
+  @extend %caption;
+  color: $bodytext-black;
+}

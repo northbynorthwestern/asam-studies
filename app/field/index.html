@@ -4,16 +4,16 @@
 {% block banner %}
 <div class="content-banner">
   <div class="banner-image">
-    <img src="{{ BAND.lead_img }}" alt="">
+    <img src="{{ FIELD.lead_img }}" alt="">
   </div>
   <div class="row">
-    <p class="caption">{{ BAND.lead_img_caption }}</p>
+    <p class="caption">{{ FIELD.lead_img_caption }}</p>
   </div>
 </div>
 {% endblock %}
 
 {% block arrows %}
-  {{ arrows(SHEETS, BAND.slug) }}
+  {{ arrows(SHEETS, FIELD.slug) }}
 {% endblock %}
 
 {% block content %}
@@ -21,18 +21,19 @@
 <div class="story-container">
   <section class="content-block row shift-left">
     <header>
-      <h2>{{ BAND.title }}</h2>
-      <p class="byline">By {{ BAND.author }}</p>
+      <h2>{{ FIELD.title }}</h2>
+      <p class="byline">By {{ FIELD.author }}</p>
     </header>
   </section>
   <section class="content-block row shift-left">
     <article class="prose">
-      {{ BAND.article }}
+      {{ FIELD.article }}
     </article>
   </section>
 </div>
 
-{{ nextStory(SHEETS, BAND.slug) }}
+{{ nextStory(SHEETS, FIELD.slug) }}
+
 {% endblock %}
 
 </div>
