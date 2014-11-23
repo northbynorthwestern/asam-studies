@@ -26,8 +26,14 @@
 
 .shift-left {
   @include shift(0);
-  @include pad(1.5em);
-  padding-bottom: 0;
+  @include media($default-768) {
+    @include pad(2em);
+    padding-bottom: 0;
+  }
+
+  @include media($default-480) {
+    @include pad(.5em);
+  }
 }
 
 .story-container {
@@ -57,4 +63,5 @@
 
 .byline {
   font-weight: 300;
+  padding-top: .25em;
 }

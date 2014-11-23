@@ -1,0 +1,39 @@
+{% extends 'app/templates/base.html' %}
+{% from "app/templates/includes/navigation.html" import arrows, nextStory %}
+
+{% block banner %}
+<div class="content-banner">
+  <div class="banner-image">
+    <img src="{{ STAFF.lead_img }}" alt="">
+  </div>
+  <div class="row">
+    <p class="caption">{{ STAFF.lead_img_caption }}</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block arrows %}
+  {{ arrows(SHEETS, STAFF.slug) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="story-container">
+  <section class="content-block row shift-left">
+    <header>
+      <h2>{{ STAFF.title }}</h2>
+      <p class="byline">By {{ STAFF.author }}</p>
+    </header>
+  </section>
+  <section class="content-block row shift-left">
+    <article class="prose">
+      {{ STAFF.article }}
+    </article>
+  </section>
+</div>
+
+{{ nextStory(SHEETS, STAFF.slug) }}
+{% endblock %}
+
+</div>
+

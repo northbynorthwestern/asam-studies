@@ -1072,11 +1072,100 @@ hr {
   hr.slim {
     height: 1px; }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../../fonts/fontello.eot?17622985");
+  src: url("../../fonts/fontello.eot?17622985#iefix") format("embedded-opentype"), url("../../fonts/fontello.woff?17622985") format("woff"), url("../../fonts/fontello.ttf?17622985") format("truetype"), url("../../fonts/fontello.svg?17622985#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?17622985#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-left-open:before {
+  content: '\3c'; }
+
+/* '&lt;' */
+.icon-right-open:before {
+  content: '\3e'; }
+
+/* '&gt;' */
+.icon-cancel:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-angle-left:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-angle-right:before {
+  content: '\e802'; }
+
+/* '' */
+.icon-right-big:before {
+  content: '\e803'; }
+
+/* '' */
+.icon-cancel-3:before {
+  content: '\e804'; }
+
+/* '' */
+.icon-cancel-4:before {
+  content: '\e805'; }
+
+/* '' */
+.icon-left-big:before {
+  content: '\e806'; }
+
+/* '' */
+.icon-cancel-6:before {
+  content: '\e807'; }
+
+/* '' */
+.icon-right-small:before {
+  content: '\e808'; }
+
+/* '' */
+.icon-left-small:before {
+  content: '\e809'; }
+
+/* '' */
 .nbn-logo {
   height: 2em !important; }
 
 .banner .grand-header h1 {
   font-family: 'Graduate', serif;
+  text-transform: uppercase;
   font-size: 3.5em !important;
   text-transform: uppercase; }
   .banner .grand-header h1 a {
@@ -1087,6 +1176,7 @@ hr {
 
 .extra-masthead {
   font-family: 'Graduate', serif;
+  text-transform: uppercase;
   color: white;
   display: inline-table;
   font-weight: 700;
@@ -1142,10 +1232,14 @@ hr {
     display: inline-block; }
 
 .arrows {
-  position: fixed;
-  top: 50vh;
+  position: absolute;
+  top: 0;
   width: 100%;
   z-index: 100; }
+  @media screen and (min-width: 768px) {
+    .arrows {
+      position: fixed;
+      top: 40vh; } }
   .arrows a {
     color: white !important;
     display: inline-block;
@@ -1173,15 +1267,23 @@ hr {
     .arrows div.icon {
       background-color: rgba(255, 176, 0, 0.8);
       font-weight: 700;
-      padding-bottom: 1em;
+      padding-bottom: 0.9375em;
       padding-top: 1em;
       text-align: center;
       width: 3em; }
+      @media screen and (max-width: 25em) {
+        .arrows div.icon {
+          display: block !important; } }
     .arrows div.title {
       font-family: 'Graduate', serif;
+      text-transform: uppercase;
       background-color: rgba(255, 176, 0, 0.8);
       padding: 1em;
+      padding-bottom: 0.9375em;
       display: none; }
+      @media screen and (max-width: 25em) {
+        .arrows div.title {
+          display: none !important; } }
   .arrows a:hover {
     text-decoration: none; }
     .arrows a:hover div.icon {
@@ -1201,6 +1303,7 @@ hr {
     padding: 10px;
     padding-bottom: .25em;
     font-family: 'Graduate', serif;
+    text-transform: uppercase;
     font-size: 1.5em; }
   .next-story a {
     color: #282828;
@@ -1245,9 +1348,14 @@ hr {
         margin-right: 0; } }
 
 .shift-left {
-  margin-left: 0%;
-  padding: 1.5em;
-  padding-bottom: 0; }
+  margin-left: 0%; }
+  @media screen and (min-width: 768px) {
+    .shift-left {
+      padding: 2em;
+      padding-bottom: 0; } }
+  @media screen and (max-width: 480px) {
+    .shift-left {
+      padding: 0.5em; } }
 
 .story-container {
   z-index: 10;
@@ -1268,10 +1376,12 @@ hr {
     background-color: white; }
   .story-container h2 {
     font-family: 'Graduate', serif;
+    text-transform: uppercase;
     font-size: 3em; }
 
 .byline {
-  font-weight: 300; }
+  font-weight: 300;
+  padding-top: .25em; }
 
 .nbn-footer {
   height: initial; }

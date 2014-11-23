@@ -9,6 +9,7 @@ $grand-header-image-url: '../img/index-grand-header.jpg';
 
 $background-color: lighten($nbn-purple, 70%);
 
+@import 'theme/icon-fonts';
 @import 'theme/helpers';
 @import 'theme/header';
 @import 'theme/landing-grid';

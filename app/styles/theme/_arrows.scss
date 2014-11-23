@@ -1,8 +1,12 @@
 $arrow-width: 3em;
 
 .arrows {
-  position: fixed;
-  top: 50vh;
+  @include media($default-768) {
+    position: fixed;
+    top: 40vh;
+  }
+  position: absolute;
+  top: 0;
   width: 100%;
   z-index: 100;
 
@@ -48,10 +52,14 @@ $arrow-width: 3em;
     &.icon {
       background-color: transparentize($navigation-yellow, .2);
       font-weight: 700;
-      padding-bottom: 1em;
+      padding-bottom: 1em - em(1px);
       padding-top: 1em;
       text-align: center;
       width: 3em;
+
+      @include media($small) {
+        display: block !important;
+      }
     }
 
 
@@ -59,7 +67,12 @@ $arrow-width: 3em;
       @include academic-serif;
       background-color: transparentize($navigation-yellow, .2);
       padding: 1em;
+      padding-bottom: 1em - em(1px);
       display: none;
+
+      @include media($small) {
+        display: none !important;
+      }
     }
   }
 

@@ -1,0 +1,38 @@
+{% extends 'app/templates/base.html' %}
+{% from "app/templates/includes/navigation.html" import arrows, nextStory %}
+
+{% block banner %}
+<div class="content-banner">
+  <div class="banner-image">
+    <img src="{{ SUPERFAN.lead_img }}" alt="">
+  </div>
+  <div class="row">
+    <p class="caption">{{ SUPERFAN.lead_img_caption }}</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block arrows %}
+  {{ arrows(SHEETS, SUPERFAN.slug) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="story-container">
+  <section class="content-block row shift-left">
+    <header>
+      <h2>{{ SUPERFAN.title }}</h2>
+      <p class="byline">By {{ SUPERFAN.author }}</p>
+    </header>
+  </section>
+  <section class="content-block row shift-left">
+    <article class="prose">
+      {{ SUPERFAN.article }}
+    </article>
+  </section>
+</div>
+
+{{ nextStory(SHEETS, SUPERFAN.slug) }}
+{% endblock %}
+
+</div>

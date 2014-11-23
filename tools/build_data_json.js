@@ -10,7 +10,15 @@ var SHEETS = [
   'META',
   'BAND',
   'FIELD',
-  'GAME'
+  'GAME',
+  'PARENTS',
+  'PRESS',
+  'PARENTSTAILGATE',
+  'STUDENTTAILGATE',
+  'SUPERFAN',
+  'TEAM',
+  'STAFF',
+  'SID'
 ];
 
 var DATA = {};
@@ -42,12 +50,19 @@ SHEETS.forEach(function(sheet) {
       var cCell = worksheet['C' + cellNumber];
       cCell = cCell ? cCell.v : '';
 
-
       if (cCell === 'markdown') {
         bCell = marked(bCell);
       }
 
-      temp[aCell] = bCell;
+      if (temp[aCell]) {
+        if (Array.isArray(temp[aCell]) && temp[aCell].length > 1) {
+          temp[aCell].push(bCell);
+        } else {
+          temp[aCell] = [temp[aCell], bCell];
+        }
+      } else {
+        temp[aCell] = bCell;
+      }
     }
   }
 

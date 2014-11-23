@@ -1,0 +1,38 @@
+{% extends 'app/templates/base.html' %}
+{% from "app/templates/includes/navigation.html" import arrows, nextStory %}
+
+{% block banner %}
+<div class="content-banner">
+  <div class="banner-image">
+    <img src="{{ PARENTSTAILGATE.lead_img }}" alt="">
+  </div>
+  <div class="row">
+    <p class="caption">{{ PARENTSTAILGATE.lead_img_caption }}</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block arrows %}
+  {{ arrows(SHEETS, PARENTSTAILGATE.slug) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="story-container">
+  <section class="content-block row shift-left">
+    <header>
+      <h2>{{ PARENTSTAILGATE.title }}</h2>
+      <p class="byline">By {{ PARENTSTAILGATE.author }}</p>
+    </header>
+  </section>
+  <section class="content-block row shift-left">
+    <article class="prose">
+      {{ PARENTSTAILGATE.article }}
+    </article>
+  </section>
+</div>
+
+{{ nextStory(SHEETS, PARENTSTAILGATE.slug) }}
+{% endblock %}
+
+</div>
