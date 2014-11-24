@@ -4,15 +4,16 @@
 
 .banner .grand-header h1 {
   @include academic-serif;
-  font-size: 3.5em !important;
+  font-size: 3em !important;
   text-transform: uppercase;
+  text-shadow: $black 2px 2px 0;
 
   a {
     color: lighten($nbn-purple, 65%) !important;
   }
 
   @include media($default-768) {
-    font-size: 5em !important;
+    font-size: 4.5em !important;
   }
 }
 

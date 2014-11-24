@@ -55,6 +55,12 @@
     background-color: $background-color;
   }
 
+  .prose h3 {
+    font-weight: 300;
+    letter-spacing: .5px;
+    font-size: 1.125em;
+  }
+
   h2 {
     @include academic-serif;
     font-size: 3em;

@@ -1,19 +1,20 @@
-{% extends 'app/templates/base.html' %}
+{% macro template(SHEET) %}
+
 {% from "app/templates/includes/navigation.html" import arrows, nextStory %}
 
 {% block banner %}
 <div class="content-banner">
   <div class="banner-image">
-    <img src="{{ SUPERFAN.lead_img }}" alt="">
+    <img src="{{ SHEET.lead_img }}" alt="">
   </div>
   <div class="row">
-    <p class="caption">{{ SUPERFAN.lead_img_caption }}</p>
+    <p class="caption">{{ SHEET.lead_img_caption }}</p>
   </div>
 </div>
 {% endblock %}
 
 {% block arrows %}
-  {{ arrows(SHEETS, SUPERFAN.slug) }}
+  {{ arrows(SHEETS, SHEET.slug) }}
 {% endblock %}
 
 {% block content %}
@@ -21,17 +22,21 @@
 <div class="story-container">
   <section class="content-block row shift-left">
     <header>
-      <h2>{{ SUPERFAN.title }}</h2>
-      <p class="byline">By {{ SUPERFAN.author }}</p>
+      <h2>{{ SHEET.title }}</h2>
+      <p class="byline">By {{ SHEET.author }}</p>
     </header>
   </section>
   <section class="content-block row shift-left">
     <article class="prose">
-      <h3>{{ SUPERFAN.subhead }}</h3>
-      {{ SUPERFAN.article }}
+      <h3>{{ SHEET.subhead }}</h3>
+      {{ SHEET.article }}
     </article>
   </section>
 </div>
 
-{{ nextStory(SHEETS, SUPERFAN.slug) }}
+{{ nextStory(SHEETS, SHEET.slug) }}
 {% endblock %}
+
+</div>
+
+{% endmacro %}

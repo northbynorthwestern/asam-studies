@@ -12,14 +12,20 @@
 
 {% block content %}
 
+<div class="content-block row project_intro">
+  <div class="prose">
+    {{ META.project_intro }}
+  </div>
+</div>
+
 <section class="landing-grid">
 
   {% for story in SHEETS.list %}
     {% if story.title %}
     <a href="{{ story.slug }}">
       <div class="{{ story.sheet }}">
+        <img src="{{ story.lead_img }}" alt="">
         <h3>{{ story.title }}</h3>
-        <img src="{{ story.landing_img }}" alt="">
       </div>
     </a>
     {% endif %}

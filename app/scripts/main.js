@@ -57,22 +57,30 @@ $(document).ready(function() {
     }
   });
 
-  var hammer = new Hammer(document);
-  hammer.on("swipeleft", function(ev) {
-    goToNextStory(ev);
+  // var hammer = new Hammer(document);
+  // hammer.on("swipeleft", function(ev) {
+  //   goToNextStory(ev);
+  // });
+
+  // hammer.on("swiperight", function(ev) {
+  //   goToPreviousStory(ev);
+  // });
+
+  document.addEventListener("keydown", function (e) {
+    var key = event.which || event.keyCode;
+    if (key == 37) { goToPreviousStory(false); }
+    if (key == 39) { goToNextStory(false) }
   });
 
-  hammer.on("swiperight", function(ev) {
-    goToPreviousStory(ev);
-  });
 
   function goToNextStory(ev) {
-    console.log('goToNextStory');
+    $(nextArrow)[0].click();
   }
 
   function goToPreviousStory(ev) {
-    console.log('goToPreviousStory');
+    $(previousArrow)[0].click();
   }
+
 
 
 });
