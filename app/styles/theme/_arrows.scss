@@ -94,6 +94,11 @@ $arrow-width: 3em;
 }
 
 .next-story {
+  margin-top: 3em;
+  @include media($default-768) {
+    margin-top: 0;
+  }
+
   background-color: transparentize($navigation-yellow, .8);
   border: $navigation-yellow 2px solid;
 

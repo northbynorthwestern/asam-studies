@@ -12,11 +12,17 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
 
-  <!-- build:css styles/vendor.css -->
+  <meta property="og:description" content="Football games have different meanings, depending on who you ask. NBN covered a single Gameday from eleven perspectives to get the whole story, on and off the field.">
+  <meta property="og:title" content="Gameday">
+  <meta property="og:url" content="http://apps.northbynorthwestern.org/gameday/">
+  <meta property="og:image" content="http://apps.northbynorthwestern.com/gameday/img/index-grand-header.jpg">
+
+
+  <!-- build:css ../styles/vendor.css -->
   <!-- bower:css -->
   <!-- endbower -->
   <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
+  <!-- build:css(.tmp) ../styles/main.css -->
   <link rel="stylesheet" href="/styles/main.css">
   <!-- endbuild -->
 </head>
@@ -25,7 +31,7 @@
 <header class="masthead">
   <div class="logo">
     <a href="//www.northbynorthwestern.com/"><img class="nbn-logo" src="http://media.northbynorthwestern.com.s3.amazonaws.com/media/img/nbn_logo.svg" alt=""></a>
-    <div class="extra-masthead"><a href="/">Gameday</a></div>
+    <div class="extra-masthead"><a href="/gameday">Gameday</a></div>
   </div>
 </header>
 
@@ -33,7 +39,7 @@
 <div class="banner">
   <div class="grand-header-image"></div>
   <header class="grand-header">
-    <h1><a href="/">Gameday</a></h1>
+    <h1><a href="/gameday">Gameday</a></h1>
     <p>Inside the anarchy of a Big Ten football game</p>
   </header>
 </div>
@@ -45,7 +51,7 @@
 
 <div class="content-block row project_intro">
   <div class="prose">
-    <p>Football games have a different meaning, depending on who you ask. Students see them as social events, players see them as the highlight of their weeks and staff members see them as their job. </p> <p> On November 8, Michigan visited Evanston to take on the Wildcats in a battle of two below-average teams. The outcome wasn't pretty — a 10-9 Wolverine victory — but what happened behind the scenes throughout the game  was a work of art. Chaos was successfully controlled, and logistically, everything went to plan. Normally, when everything goes to plan, that isn't newsworthy. But hey, this isn't normal. It's Gameday.
+    <p>Football games have different meanings, depending on who you ask. For students, they're social events. For players, they're the culmination of a hard week of practice. And for the staff, the games are their jobs. </p> <p> On November 8, Michigan visited Evanston to take on the Wildcats in a battle of two below-.500 teams. The outcome wasn't pretty – a 10-9 Wolverine victory – but what happened behind the scenes throughout the game  was a work of art. </p> <p>Chaos was successfully controlled, and logistically, everything went to plan. Normally, when everything goes to plan, that isn't newsworthy. But hey, this isn't supposed to be normal. It's Gameday. </p>
   </div>
 </div>
 
@@ -66,7 +72,7 @@
     
     <a href="field">
       <div class="FIELD">
-        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/IMG_6955_2.JPG" alt="">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/IMG_6955_22.jpg" alt="">
         <h3>The Field</h3>
       </div>
     </a>
@@ -93,7 +99,7 @@
     
     <a href="press">
       <div class="PRESS">
-        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/IMG_7477_2.JPG" alt="">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/IMG_6919_22.jpg" alt="">
         <h3>The Press</h3>
       </div>
     </a>
@@ -102,7 +108,7 @@
     
     <a href="student-tailgate">
       <div class="STUDENTTAILGATE">
-        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/IMG_6904_2.JPG" alt="">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/IMG_6830_2.JPG" alt="">
         <h3>The Student Tailgate</h3>
       </div>
     </a>
@@ -111,7 +117,7 @@
     
     <a href="parent-tailgate">
       <div class="PARENTSTAILGATE">
-        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/photo_4.JPG" alt="">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/photo_42.jpg" alt="">
         <h3>The Parent Tailgate</h3>
       </div>
     </a>
@@ -147,7 +153,7 @@
     
     <a href="parents">
       <div class="PARENTS">
-        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/The_Parents_Main.jpg" alt="">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/11/23/The_Parents_Main2.jpg" alt="">
         <h3>The Parents</h3>
       </div>
     </a>
@@ -164,20 +170,22 @@
     <div class="credits shift-left">
       <p><strong>Published on Nov. 23, 2014</strong></p>
       <p><strong>Design and Development</strong>: Alex Duner</p>
+      <p><strong>Photography: </strong>Daniel Hersh, Jeremy Gaines, Elizabeth Santoro and Austin Siegel</p>
       <p>&copy; 2014 <a href="http://www.northbynorthwestern.com/">North by Northwestern</a></p>
     </div>
   </div>
 </footer>
 
-<!-- build:js scripts/vendor.js -->
+<!-- build:js ../scripts/vendor.js -->
 <!-- bower:js -->
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
-<!-- build:js({app,.tmp}) scripts/main.js -->
-<script src="/scripts/flexslider.min.js"></script>
+<!-- build:js({app,.tmp}) ../scripts/main.js -->
 <script src="/scripts/main.js"></script>
+<!-- endbuild -->
+
 <script>
   $(window).load(function() {
     $('.flexslider').flexslider({
@@ -185,7 +193,6 @@
     });
   });
 </script>
-<!-- endbuild -->
 
 </body>
 </html>

@@ -12,11 +12,17 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
 
-  <!-- build:css styles/vendor.css -->
+  <meta property="og:description" content="Football games have different meanings, depending on who you ask. NBN covered a single Gameday from eleven perspectives to get the whole story, on and off the field.">
+  <meta property="og:title" content="Gameday">
+  <meta property="og:url" content="http://apps.northbynorthwestern.org/gameday/">
+  <meta property="og:image" content="http://apps.northbynorthwestern.com/gameday/img/index-grand-header.jpg">
+
+
+  <!-- build:css ../styles/vendor.css -->
   <!-- bower:css -->
   <!-- endbower -->
   <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
+  <!-- build:css(.tmp) ../styles/main.css -->
   <link rel="stylesheet" href="/styles/main.css">
   <!-- endbuild -->
 </head>
@@ -25,7 +31,7 @@
 <header class="masthead">
   <div class="logo">
     <a href="//www.northbynorthwestern.com/"><img class="nbn-logo" src="http://media.northbynorthwestern.com.s3.amazonaws.com/media/img/nbn_logo.svg" alt=""></a>
-    <div class="extra-masthead"><a href="/">Gameday</a></div>
+    <div class="extra-masthead"><a href="/gameday">Gameday</a></div>
   </div>
 </header>
 
@@ -57,13 +63,13 @@
 
     <div class="arrows">
     
-      <a href="/food" class="arrow previous">
+      <a href="../food" class="arrow previous">
         <div class="title">The Food Staff</div>
         <div class="icon icon-left-small"></div>
       </a>
     
     
-      <a href="/press" class="arrow next">
+      <a href="../press" class="arrow next">
         <div class="icon icon-right-small"></div>
         <div class="title">The Press</div>
       </a>
@@ -158,10 +164,10 @@
     
     
     <div class="content-block row shift-left">
-      <a href="/press" class="bottom-navigation">
+      <a href="../press" class="bottom-navigation">
         <div class="next-story">
             <div class="title">The Press<span class="arrow icon-right-small"></span></div>
-            <p>Or <a href="/">return to the starting page</a> to explore more Gameday stories.</p>
+            <p>Or <a href="../">return to the starting page</a> to explore more Gameday stories.</p>
         </div>
       </a>
     </div>
@@ -192,20 +198,22 @@
     <div class="credits shift-left">
       <p><strong>Published on Nov. 23, 2014</strong></p>
       <p><strong>Design and Development</strong>: Alex Duner</p>
+      <p><strong>Photography: </strong>Daniel Hersh, Jeremy Gaines, Elizabeth Santoro and Austin Siegel</p>
       <p>&copy; 2014 <a href="http://www.northbynorthwestern.com/">North by Northwestern</a></p>
     </div>
   </div>
 </footer>
 
-<!-- build:js scripts/vendor.js -->
+<!-- build:js ../scripts/vendor.js -->
 <!-- bower:js -->
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
-<!-- build:js({app,.tmp}) scripts/main.js -->
-<script src="/scripts/flexslider.min.js"></script>
+<!-- build:js({app,.tmp}) ../scripts/main.js -->
 <script src="/scripts/main.js"></script>
+<!-- endbuild -->
+
 <script>
   $(window).load(function() {
     $('.flexslider').flexslider({
@@ -213,7 +221,6 @@
     });
   });
 </script>
-<!-- endbuild -->
 
 </body>
 </html>

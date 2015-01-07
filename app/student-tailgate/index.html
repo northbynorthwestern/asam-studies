@@ -32,6 +32,15 @@
     </article>
   </section>
 </div>
+<div class="slideshow flexslider">
+  <ul class="slides">
+    {% for picture in STUDENTTAILGATE.slideshow_picture %}
+    <li>
+      <img src="{{ picture }}" alt="">
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
 {{ nextStory(SHEETS, STUDENTTAILGATE.slug) }}
 {% endblock %}

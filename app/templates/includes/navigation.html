@@ -7,13 +7,13 @@
 
     <div class="arrows">
     {% if before and before.title %}
-      <a href="/{{ before.slug }}" class="arrow previous">
+      <a href="../{{ before.slug }}" class="arrow previous">
         <div class="title">{{ before.title }}</div>
         <div class="icon icon-left-small"></div>
       </a>
     {% endif %}
     {% if after %}
-      <a href="/{{ after.slug }}" class="arrow next">
+      <a href="../{{ after.slug }}" class="arrow next">
         <div class="icon icon-right-small"></div>
         <div class="title">{{ after.title }}</div>
       </a>
@@ -33,10 +33,10 @@
     {% set after = sheets.list[loop.index0 + 1] %}
     {% if after %}
     <div class="content-block row shift-left">
-      <a href="/{{ after.slug }}" class="bottom-navigation">
+      <a href="../{{ after.slug }}" class="bottom-navigation">
         <div class="next-story">
             <div class="title">{{ after.title }}<span class="arrow icon-right-small"></span></div>
-            <p>Or <a href="/">return to the starting page</a> to explore more Gameday stories.</p>
+            <p>Or <a href="../">return to the starting page</a> to explore more Gameday stories.</p>
         </div>
       </a>
     </div>
