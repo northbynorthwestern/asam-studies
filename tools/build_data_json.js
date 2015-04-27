@@ -8,17 +8,7 @@ marked.setOptions({
 
 var SHEETS = [
   'META',
-  'SUPERFAN',
-  'FIELD',
-  'STAFF',
-  'BAND',
-  'PRESS',
-  'STUDENTTAILGATE',
-  'PARENTSTAILGATE',
-  'TEAM',
-  'GAME',
-  'SID',
-  'PARENTS'
+  'STORY'
 ];
 
 var DATA = {};
