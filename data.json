@@ -3,7 +3,7 @@
     "list": [
       {
         "project_title": "",
-        "design_and_dev": "",
+        "design_and_dev": "Morgan Kinney and Rosalie Chan",
         "photo_cred": "",
         "project_subhead": "",
         "base_url": "",
@@ -13,13 +13,16 @@
       },
       {
         "slug": "story",
+        "text_a": "<p>asdga</p>",
+        "iframe_src": "http://asdgasdg",
+        "text_b": "",
         "sheet": "STORY"
       }
     ]
   },
   "META": {
     "project_title": "",
-    "design_and_dev": "",
+    "design_and_dev": "Morgan Kinney and Rosalie Chan",
     "photo_cred": "",
     "project_subhead": "",
     "base_url": "",
@@ -29,6 +32,9 @@
   },
   "STORY": {
     "slug": "story",
+    "text_a": "<p>asdga</p>",
+    "iframe_src": "http://asdgasdg",
+    "text_b": "",
     "sheet": "STORY"
   }
 }
