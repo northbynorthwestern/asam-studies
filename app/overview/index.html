@@ -25,20 +25,11 @@
       <h3>{{ STORY.subhead }}</h3>
     </article>
     <article class="prose">
-      {{ STORY.text_a }}
-      <iframe src="{{ BAND.ifrrame_src }}" frameborder="0"></iframe>
-      {{ STORY.text_b }}
+      {{ STORY.article }}
+<!--       <iframe src="{{ BAND.ifrrame_src }}" frameborder="0"></iframe>
+      {{ STORY.text_b }} -->
     </article>
   </section>
-</div>
-<div class="slideshow flexslider">
-  <ul class="slides">
-    {% for picture in STORY.slideshow_picture %}
-    <li>
-      <img src="{{ picture }}" alt="">
-    </li>
-    {% endfor %}
-  </ul>
 </div>
 
 {% endblock %}

@@ -18,39 +18,19 @@
   </div>
 </div>
 
-<h1>Date 1</h1>
 <section class="landing-grid">
 
-  <a href="{{ STORY.slug }}">
-    <div class="{{ STORY.sheet }}">
-      <img src="{{ STORY.lead_img }}" alt="">
-      <h3>{{ STORY.title }}</h3>
+{% for story in SHEETS.list %}
+    {% if story.title %}
+  <a href="{{ story.slug }}">
+    <div class="{{ story.sheet }}">
+      <img src="{{ story.lead_img }}" alt="">
+      <h3>{{ story.title }}</h3>
     </div>
   </a>
-  <a href="{{ STORY.slug }}">
-    <div class="{{ STORY.sheet }}">
-      <img src="{{ STORY.lead_img }}" alt="">
-      <h3>{{ STORY.title }}</h3>
-    </div>
-  </a>
-</section>
+   {% endif %}
+{% endfor %}
 
-<h1>Date 2</h1>
-<div></div>
-<section class="landing-grid">
-  
-  <a href="{{ STORY.slug }}">
-    <div class="{{ STORY.sheet }}">
-      <img src="{{ STORY.lead_img }}" alt="">
-      <h3>{{ STORY.title }}</h3>
-    </div>
-  </a>
-  <a href="{{ STORY.slug }}">
-    <div class="{{ STORY.sheet }}">
-      <img src="{{ STORY.lead_img }}" alt="">
-      <h3>{{ STORY.title }}</h3>
-    </div>
-  </a>
 </section>
 
 {% endblock %}

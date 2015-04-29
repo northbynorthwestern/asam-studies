@@ -17,23 +17,4 @@
   }
 }
 
-.extra-masthead {
-  @include academic-serif;
 
-  color: $white;
-  display: inline-table;
-  font-weight: 700;
-  height: 100%;
-  position: relative;
-  top: -.5em;
-
-  a {
-    color: $white;
-    display: table-cell;
-    margin-left: .25em;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover { text-decoration: none; }
-  }
-}

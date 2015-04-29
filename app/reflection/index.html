@@ -1,0 +1,35 @@
+{% extends 'app/templates/base.html' %}
+
+{% block banner %}
+<div class="content-banner">
+  <div class="banner-image">
+    <img src="{{ REFLECTION.lead_img }}" alt="">
+  </div>
+  <div class="row">
+    <p class="caption">{{ REFLECTION.lead_img_caption }}</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="story-container">
+  <section class="content-block row shift-left">
+    <header>
+      <h2>{{ REFLECTION.title }}</h2>
+      <p class="byline">By {{ REFLECTION.author }}</p>
+    </header>
+  </section>
+  <section class="content-block row shift-left">
+    <article class="prose">
+      <h3>{{ REFLECTION.subhead }}</h3>
+    </article>
+    <article class="prose">
+      {{ REFLECTION.article }}
+<!--       <iframe src="{{ BAND.ifrrame_src }}" frameborder="0"></iframe>
+      {{ STORY.text_b }} -->
+    </article>
+  </section>
+</div>
+
+{% endblock %}
