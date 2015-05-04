@@ -12,24 +12,239 @@
 {% endblock %}
 
 {% block content %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr --> 
+</head>
+<body>
+  <div>
+    <div id="title">What even happened?</div>
+    <div id="byline">by Sam Niiro and Sarah Turbin</div>
+    <div id="timeline">In April and May of 1995, the Asian American Advisory Board at Northwestern went on a hunger strike in protest of the lack of Asian American Studies in the Northwestern curriculum. The strike spanned 23 days from April 12 to May 4, involving dozens of students and capturing nationwide attention. This is its story.</h2>
+  </div>
 
-<div class="story-container">
-  <section class="content-block row shift-left">
-    <header>
-      <h2>{{ TIMELINE.title }}</h2>
-      <p class="byline">By {{ TIMELINE.author }}</p>
-    </header>
-  </section>
-  <section class="content-block row shift-left">
-    <article class="prose">
-      <h3>{{ TIMELINE.subhead }}</h3>
-    </article>
-    <article class="prose">
-      {{ TIMELINE.article }}
-<!--       <iframe src="{{ BAND.ifrrame_src }}" frameborder="0"></iframe>
-      {{ STORY.text_b }} -->
-    </article>
-  </section>
-</div>
+  <section id="cd-timeline" class="cd-container">
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-picture">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Picture">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>First adviser proposal</h2>
+        <p>Though the strike would not be for a few years, its story begins in 1991. Half a year after its founding, the Asian American Advisory Board, an advocacy group for Asian-American students on campus, submitted its first proposal for an Asian American advisor to the Office of Student Affairs. The AAAB argued that Asian American students needed a specific advocate in the Northwestern administration. Among the intended duties of this proposed advisor: the creation of an Asian American studies program. The proposal was rejected.</p>
+        <span class="cd-date" style="font-size:18px;">September 1, 1991</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Student Organized Seminar</h2>
+        <p>The AAAB developed a Student Organized Seminar, a student-driven cooperative seminar taken for credit, covering Asian-American life and culture. The course was so popular it was offered six times in three years.</p>
+        <span class="cd-date" style="font-size:18px;">March 1, 1992</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-picture">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Picture">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Second adviser proposal</h2>
+        <p>The AAAB submitted a revision of its original proposal for an Asian American advisor. The proposal was rejected.</p>
+        <span class="cd-date" style="font-size:18px;">September 1, 1992</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Third adviser proposal</h2>
+        <p>The AAAB submitted a third proposal for an Asian American advisor. The proposal was rejected.</p>
+        <span class="cd-date" style="font-size:18px;">January 1, 1993</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Undergraduate Survey</h2>
+        <p>The Undergraduate Survey asked students what is lacking in the current curriculum. As cited in the AAAB's proposal, the most common response was that the curriculum needed additional courses in ethnic and cultural studies. Twelve percent of students explicitly stated a desire for an Asian American studies program.</p>
+        <span class="cd-date" style="font-size:18px;">February 1, 1994</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>S.L. 9495-07</h2>
+        <p>Partly in response to the Undergraduate Survey, as well as lobbying from the AAAB, the Associated Student Government passed S.L. 9495-07, a resolution which called on the University to create an Asian American studies program.</p>
+        <span class="cd-date" style="font-size:18px;">January 17, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Program proposal</h2>
+        <p>The AAAB sent a proposal for an Asian American studies program (separate from its proposal for an advisor) to Northwestern. The proposal included the hiring of seven full-time faculty members, one to serve as a full-time director of the program while six are appointed as joint faculty members with other departments by Fall 1999. Attached to the proposal were letters of support from faculty and the signatures of over 1200 students. On Feb. 14, then-Northwestern President Henry Bienen responded to the Feb. 2 proposal in a letter to the AAAB. Though he was responsive to student interest in the creation of an Asian American studies program, he said that any proposal must go the faculty-run Curricular Policies Committee for the creation and review of new curricular proposals.</p>
+        <span class="cd-date" style="font-size:18px;">February 2, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Dr. Kenyon Chan visit</h2>
+        <p>Dr. Kenyon Chan, President of the Association for Asian American Studies, came to Northwestern. He met with NU faculty and administrators to discuss the development of an Asian American studies program.</p>
+        <span class="cd-date" style="font-size:18px;">February 16, 1995 - February 17, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Revised proposal</h2>
+        <p>In order to get a specific commitment out of Northwestern, the AAAB reduced the scope of its proposal. A revised proposal was submitted, calling for the hiring of two core faculty and one program director. AAAB executive members privately agreed that only a commitment from Northwestern to hiring tenure-track professors would suffice to satisfy their requests.</p>
+        <span class="cd-date" style="font-size:18px;">April 7, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-picture">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Picture">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Second press conference</h2>
+        <p>After a March press conference that announced its dissatisfaction with the University's response and its revised proposal, the AAAB still believed no action was likely from the administration. AAAB Chairwoman Grace Lou held a press conference announcing that the AAAB intended to begin a hunger strike on Wednesday, April 12.</p>
+        <span class="cd-date" style="font-size:18px;">April 10, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>The opening rally</h2>
+        <p>More than 200 students, including AAAB members as well as members of the Bisexual, Gay and Lesbian Student Alliance (BGALA) and Casa Hispana, met for a morning rally outside of the Rebecca Crown Center. At 11 a.m., the hunger strike began with 17 participants, all students.</p>
+        <span class="cd-date" style="font-size:18px;">April 12, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-picture">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Picture">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Bienen and pizza</h2>
+        <p>Bienen spoke to the Daily Northwestern. He reiterated the University's commitment to traditional channels for curricular change and called the strike itself "coercion and intimidation." The undergraduate Conservative Council, in response to what it sees as an absurd student action, ordered a large number of pizzas to hand out. Some students, upon realizing what the pizzas are for, threw out their free slices. One student picked up an entire pizza and threw it on the ground.</p>
+        <span class="cd-date" style="font-size:18px;">April 13, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>New strategies</h2>
+        <p>Privately, AAAB organizers discussed the toll the strike is taking on protesters. The difficulties of holding a prolonged student action at Northwestern became apparent; many strikers, knee-deep in midterm season, pulled out in order to commit to their studies. A switch to a "serial strike," changing out strikers in shifts, was discussed. Though he had yet to issue a formal response to the strike, President Bienen left Illinois for the weekend, as do many students, who headed home for Passover or Easter.</p>
+        <span class="cd-date" style="font-size:18px;">April 14, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Second rally</h2>
+        <p>As classes resumed on Monday, the AAAB held a second rally at the Rock. Ten of the original 17 protesters remained. In front of a rally of over 250 students and faculty, AAAB President Grace Lou announced a new strategy: a "serial strike," in which strikers will swap out for one to six day shifts. President Bienen finally formally responded to the hunger strike. In a letter addressed "To Our Students Participating in the Hunger Strike," he said the administration "has never rejected the idea of changes in the curriculum," but says these must go through proper channels. Bienen called on students to end the strike and instead work with the Curricular Policies Committee, the "established forum for faculty deliberation" on such matters.</p>
+        <span class="cd-date" style="font-size:18px;">April 17, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Negotiations</h2>
+        <p>College of Arts and Sciences Dean Dumas offered to negotiate with the strikers. By midnight, the strikers left with a compromise offer: four classes in the 1995-1996 school year. In a formal letter that followed, he clarified that these classes would be offered while the Curricular Policies Committee discusses the idea of an Asian American studies program. If no conclusion is reached in the CPC, Dumas offered to extend those classes into the 1996-1997 school year. The AAAB negotiators brought Dumas' proposal back to the rest of the AAAB. The members of the AAAB voted to reject the offer, refusing to back any offer that does not commit to permanent classes.</p>
+        <span class="cd-date" style="font-size:18px;">April 19, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+        
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>National response</h2>
+        <p>Elsewhere in the United States, 17 Princeton students staged a take-over of university offices, inspired in part by the actions at Northwestern. At Stanford, eight students conducted a 24-hour solidarity fast from April 19 through April 20. Nationwide, students from universities such as UCLA, DePaul, UIC, Harvard, Brown, Columbia, Cornell, the University of Maryland, Princeton and Stanford pledged support for the NU hunger strikers.</p>
+        <span class="cd-date" style="font-size:18px;">April 20, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+        
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>The last one</h2>
+        <p>Twelve days after the start of the strike, the last original striker, Charles Chun, dropped out. He had lost 20 pounds.</p>
+        <span class="cd-date" style="font-size:18px;">April 25, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+        
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/05/03/red.png" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>The strike ends</h2>
+        <p>AAAB called off the hunger strike to focus directly on lobbying the faculty. Their efforts would not show fruit until 1999, when the Asian American Studies program was established as a minor in Weinberg with two core faculty members. Today, the program includes four core faculty members and a director; still two faculty short of the AAAB's original goals.</p>
+        <span class="cd-date" style="font-size:18px;">May 4, 1995</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+  </section> <!-- cd-timeline -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
 
 {% endblock %}

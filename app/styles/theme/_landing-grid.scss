@@ -38,7 +38,7 @@
       text-decoration: none;
 
       h3 {
-        @include highlight-landing(transparentize($nbn-purple, .0));
+        @include highlight-landing(transparentize(black, .0));
       }
       img {
         opacity: 1;
@@ -46,10 +46,12 @@
     }
 
     h3 {
-      position: absolute;
+      position: relative;
+      line-height: 1.6;
+      width: 50%;
       margin-top: 1em;
       font-size: 1.25em;
-      @include highlight-landing(transparentize($nbn-purple, .125));
+      @include highlight-landing(transparentize(black, .0));
     }
 
     img {

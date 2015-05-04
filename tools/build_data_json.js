@@ -8,7 +8,16 @@ marked.setOptions({
 
 var SHEETS = [
   'META',
-  'STORY'
+  'OVERVIEW',
+  'TIMELINE',
+  // 'COMPASRISON',
+  // 'BIENEN',
+  // 'AUDIO',
+  // 'ALUMNI',
+  // 'REFLECTION',
+  // 'WRAPUP',
+  // 'EVENT'
+
 ];
 
 var DATA = {};

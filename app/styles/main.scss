@@ -2,7 +2,7 @@
 @import 'neat/app/assets/stylesheets/neat';
 
 $banner-height: 75vh;
-$grand-header-image-url: '../img/arch.jpg';
+$grand-header-image-url: '../img/AASPheader.jpg';
 
 @import 'nbnteractive-styles/initialize';
 @import 'nbnteractive-styles/theme/theme';
@@ -15,7 +15,6 @@ $background-color: lighten($nbn-purple, 70%);
 @import 'theme/landing-grid';
 @import 'theme/content-page';
 @import 'theme/slideshow';
-@import 'styles';
 
 .nbn-footer {
   height: initial;
