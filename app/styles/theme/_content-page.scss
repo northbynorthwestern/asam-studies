@@ -6,6 +6,11 @@
     overflow: hidden;
   }
 
+  .banner-image-tracking {
+   max-height: 65vh;
+    overflow: hidden;
+  }
+
   img {
     @include fill-parent();
   }

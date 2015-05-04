@@ -1,0 +1,45 @@
+{% extends 'app/templates/base.html' %}
+
+{% block banner %}
+<div class="content-banner">
+  <div class="banner-image-tracking">
+    <img src="{{ TRACKING.lead_img }}" alt="">
+  </div>
+  <div class="row">
+    <p class="caption">{{ TRACKING.lead_img_caption }}</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="story-container">
+  <section class="content-block row shift-left">
+    <header>
+      <h2>{{ TRACKING.title }}</h2>
+      <p class="byline">By {{ TRACKING.author }}</p>
+    </header>
+  </section>
+  <section class="content-block row shift-left">
+    <article class="prose">
+      <h3>{{ TRACKING.subhead }}</h3>
+    </article>
+    <article class="prose">
+      {{ TRACKING.article }}
+<!--       <iframe src="{{ BAND.ifrrame_src }}" frameborder="0"></iframe>
+      {{ STORY.text_b }} -->
+    </article>
+  </section>
+</div>
+
+<div class="slideshow flexslider">
+  <ul class="slides">
+    {% for picture in TRACKING.slideshow_picture %}
+    <li>
+      <img src="{{ picture }}" alt="">
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
