@@ -112,9 +112,23 @@ module.exports = function (grunt) {
       styles: {
         expand: true,
         dot: true,
-        cwd: '<%= config.app %>/styles',
-        dest: '.tmp/styles/',
+        cwd: '.tmp/styles/',
+        dest: '<%= config.dist %>/styles',
         src: '{,*/}*.css'
+      },
+      // scripts: {
+      //   expand: true,
+      //   dot: true,
+      //   cwd: '.tmp/scripts/',
+      //   dest: '<%= config.dist %>/scripts',
+      //   src: '{,*/}*.js'
+      // },
+      img: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/img',
+        dest: '<%= config.dist %>/img',
+        src: '{,*/}*.*'
       }
     },
 
@@ -226,22 +240,36 @@ module.exports = function (grunt) {
 
     useminPrepare: {
       landing: {
-        dest: '<%= config.dist %>',
-        src: ['<%= config.app %>/templates/base-landing.html']
+        options: {
+          dest: '<%= config.dist %>'
+        },
+        src: ['<%= config.app %>/index.html']
       },
       pages: {
         dest: '<%= config.dist %>',
-        src: ['<%= config.app %>/templates/base.html']
+        src: ['<%= config.app %>/**/*.html']
       }
     },
 
+    // usemin: {
+    //   options: {
+    //     assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
+    //   },
+    //   html: ['<%= config.dist %>/{,*/}*.html'],
+    //   css: ['<%= config.dist %>/styles/{,*/}*.css']
+    // },
     usemin: {
       options: {
-        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
+        assetsDirs: [
+          '<%= config.dist %>',
+          '<%= config.dist %>/images',
+          '<%= config.dist %>/styles'
+        ]
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
+
 
     watch: {
       bower: {
@@ -306,9 +334,10 @@ module.exports = function (grunt) {
     'copy:styles',
     'imagemin',
     'autoprefixer',
-    'concat',
+    // 'concat',
     'cssmin',
     'copy:dist',
+    'copy:img',
     'copy:bowerAssets',
     'copy:compiledHtml',
     'rev',

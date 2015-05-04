@@ -16,6 +16,8 @@ $background-color: lighten($nbn-purple, 70%);
 @import 'theme/content-page';
 @import 'theme/slideshow';
 
+@import 'timeline';
+
 .nbn-footer {
   height: initial;
 }
