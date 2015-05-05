@@ -12,10 +12,10 @@ var SHEETS = [
   'TIMELINE',
   'TRACKING',
   'BIENEN',
+  'ALUMNI',
   // 'COMPASRISON',
   // 'AUDIO',
-  // 'ALUMNI',
-  // 'REFLECTION',
+    // 'REFLECTION',
   // 'WRAPUP',
   // 'EVENT'
 
