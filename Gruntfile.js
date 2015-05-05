@@ -116,13 +116,13 @@ module.exports = function (grunt) {
         dest: '<%= config.dist %>/styles',
         src: '{,*/}*.css'
       },
-      // scripts: {
-      //   expand: true,
-      //   dot: true,
-      //   cwd: '.tmp/scripts/',
-      //   dest: '<%= config.dist %>/scripts',
-      //   src: '{,*/}*.js'
-      // },
+      scripts: {
+        expand: true,
+        dot: true,
+        cwd: '.tmp/scripts/',
+        dest: '<%= config.dist %>/scripts',
+        src: '{,*/}*.js'
+      },
       img: {
         expand: true,
         dot: true,
@@ -241,35 +241,37 @@ module.exports = function (grunt) {
     useminPrepare: {
       landing: {
         options: {
-          dest: '<%= config.dist %>'
+          dest: '<%= config.dist %>',
         },
         src: ['<%= config.app %>/index.html']
       },
       pages: {
-        dest: '<%= config.dist %>',
-        src: ['<%= config.app %>/**/*.html']
+        options: {
+          dest: '<%= config.dist %>',
+        },
+        src: ['<%= config.app %>/{,*/}*.html', '!<%= config.app %>/index.html']
       }
     },
 
-    // usemin: {
-    //   options: {
-    //     assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
-    //   },
-    //   html: ['<%= config.dist %>/{,*/}*.html'],
-    //   css: ['<%= config.dist %>/styles/{,*/}*.css']
-    // },
     usemin: {
       options: {
         assetsDirs: [
-          '<%= config.dist %>',
-          '<%= config.dist %>/images',
-          '<%= config.dist %>/styles'
-        ]
+            '<%= config.dist %>',
+            '<%= config.dist %>/images',
+            '<%= config.dist %>/styles',
+            '<%= config.dist %>/scripts'],
+        blockReplacements: {
+            css: function (block) {
+                return '<link rel="stylesheet" href="' + block.dest + '"/>';
+            },
+            js: function (block) {
+                return '<script src="' + block.dest + '"></script>';
+            }
+        }
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
-
 
     watch: {
       bower: {
@@ -334,14 +336,15 @@ module.exports = function (grunt) {
     'copy:styles',
     'imagemin',
     'autoprefixer',
-    // 'concat',
-    'cssmin',
+    'concat',
     'copy:dist',
     'copy:img',
     'copy:bowerAssets',
     'copy:compiledHtml',
+    'copy:scripts',
     'rev',
     'usemin',
+    // 'cssmin',
     'htmlmin'
   ]);
 
