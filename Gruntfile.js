@@ -112,9 +112,23 @@ module.exports = function (grunt) {
       styles: {
         expand: true,
         dot: true,
-        cwd: '<%= config.app %>/styles',
-        dest: '.tmp/styles/',
+        cwd: '.tmp/styles/',
+        dest: '<%= config.dist %>/styles',
         src: '{,*/}*.css'
+      },
+      scripts: {
+        expand: true,
+        dot: true,
+        cwd: '.tmp/scripts/',
+        dest: '<%= config.dist %>/scripts',
+        src: '{,*/}*.js'
+      },
+      img: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/img',
+        dest: '<%= config.dist %>/img',
+        src: '{,*/}*.*'
       }
     },
 
@@ -226,18 +240,34 @@ module.exports = function (grunt) {
 
     useminPrepare: {
       landing: {
-        dest: '<%= config.dist %>',
-        src: ['<%= config.app %>/templates/base-landing.html']
+        options: {
+          dest: '<%= config.dist %>',
+        },
+        src: ['<%= config.app %>/index.html']
       },
       pages: {
-        dest: '<%= config.dist %>',
-        src: ['<%= config.app %>/templates/base.html']
+        options: {
+          dest: '<%= config.dist %>',
+        },
+        src: ['<%= config.app %>/{,*/}*.html', '!<%= config.app %>/index.html']
       }
     },
 
     usemin: {
       options: {
-        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
+        assetsDirs: [
+            '<%= config.dist %>',
+            '<%= config.dist %>/images',
+            '<%= config.dist %>/styles',
+            '<%= config.dist %>/scripts'],
+        blockReplacements: {
+            css: function (block) {
+                return '<link rel="stylesheet" href="' + block.dest + '"/>';
+            },
+            js: function (block) {
+                return '<script src="' + block.dest + '"></script>';
+            }
+        }
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
@@ -307,12 +337,14 @@ module.exports = function (grunt) {
     'imagemin',
     'autoprefixer',
     'concat',
-    'cssmin',
     'copy:dist',
+    'copy:img',
     'copy:bowerAssets',
     'copy:compiledHtml',
+    'copy:scripts',
     'rev',
     'usemin',
+    // 'cssmin',
     'htmlmin'
   ]);
 

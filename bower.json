@@ -3,6 +3,13 @@
   "private": true,
   "dependencies": {
     "jquery": "1",
-    "nbnteractive-styles": "northbynorthwestern/nbnteractive-styles"
+    "nbnteractive-styles": "northbynorthwestern/nbnteractive-styles",
+    "FlexSlider": "*",
+    "modernizr": "~2.8.3"
+  },
+  "overrides": {
+    "FlexSlider": {
+      "main": "jquery.flexslider-min.js"
+    }
   }
 }
